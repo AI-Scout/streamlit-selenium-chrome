@@ -24,4 +24,4 @@ def page_source(url):
     driver.get(url)
     return driver.page_source
 
-st.code(page_source("http://apple.com"))
+st.code(page_source("http://example.com"))
