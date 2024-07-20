@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 @st.cache_resource
 def get_driver():
-    return webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),options=options)
+    return webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
 
 options = Options()
 options.add_argument("--disable-gpu")
