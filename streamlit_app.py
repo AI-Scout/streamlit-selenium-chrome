@@ -18,7 +18,7 @@ driver = get_driver()
 
 def page_source(url):
     driver.get(url)
-    driver.explicitly_wait(20)
+    driver.implicitly_wait(20)
     return driver.page_source
 
 def get_urls(html_content):
