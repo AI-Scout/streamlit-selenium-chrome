@@ -17,8 +17,9 @@ options.add_argument("--headless")
 driver = get_driver()
 
 def page_source(url):
+    driver.implicitly_wait(20)
     driver.get(url)
-    driver.implicitly_wait(100)
+    
     return driver.page_source
 
 def get_urls(html_content):
