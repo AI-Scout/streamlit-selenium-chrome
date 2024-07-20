@@ -6,7 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.os_manager import ChromeType
 from bs4 import BeautifulSoup
 
-#@st.cache_resource
+@st.cache_resource
 def get_driver():
     return webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),options=options)
 
@@ -18,7 +18,7 @@ driver = get_driver()
 
 def page_source(url):
     driver.get(url)
-    driver.implicitly_wait(20)
+    driver.implicitly_wait(100)
     return driver.page_source
 
 def get_urls(html_content):
