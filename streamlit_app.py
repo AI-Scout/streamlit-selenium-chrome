@@ -9,14 +9,14 @@ from bs4 import BeautifulSoup
 #@st.cache_resource
 def get_driver():
     return webdriver.Chrome(
-        service=Service(
-            ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
+        #service=Service(
+         #   ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
         ),
         options=options,
     )
 
 options = Options()
-# options.add_argument("--disable-gpu")
+options.add_argument("--disable-gpu")
 options.add_argument("--headless")
 
 driver = get_driver()
